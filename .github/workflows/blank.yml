@@ -1,0 +1,18 @@
+name: pardhu
+
+on:
+  workflow_dispatch:
+
+jobs:
+  checkout-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: clone Chandrapardhup/database-design PUBLIC repository
+        uses: Chandrapardhup/clone-github-repo-action@v2.4
+        with:
+         depth: 1
+         branch: 'main'
+         owner: 'Chandrapardhu'
+         repository: 'database-design'
+      - name: List files
+        run: ls
